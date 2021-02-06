@@ -1,0 +1,27 @@
+<h1>Tests#index</h1>
+<p>Find me in app/views/tests/index.html.erb</p>
+
+<% @tests.each do |test| %>
+
+<div class="card-image">
+ <figure class="image is-4by3">
+    <%= attachment_image_tag test, :image %>
+ </figure>
+</div>
+
+<div class="card-content">
+ <div class="media">
+    <div class="media-content">
+         <p class="title is-4"><%= test.title %></p>
+    </div>
+    </div>
+</div>
+            
+<tr>
+ <td><%= simple_format test.body %></td>
+</tr>
+
+<% end %>
+
+
+<%= link_to '投稿する', new_test_path %>
