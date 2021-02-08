@@ -1,29 +1,7 @@
-<h1>Tests#new</h1>
-<p>Find me in app/views/tests/new.html.erb</p>
-
-<section class="section">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-6">
-        <%= form_for @test do |f| %>
-          <div class="field">
-            <%= f.label :title, "タイトル", class: "label" %>
-            <%= f.text_field :title, class: "input" %>
-          </div>
-
-          <div class="field">
-            <%= f.label :body, "記事", class: "label" %>
-            <%= f.text_area :body, class: "textarea" %>
-          </div>
-
-          <div class="field">
-            <%= f.label :image, "写真", class: "label" %>
-            <%= f.attachment_field :image, class: "input" %>
-          </div>
-
-          <%= f.submit '投稿', class: "button is-success" %>
-        <% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <%= render 'form', test: @test %>
       </div>
-    </div>
   </div>
-</section>
+</div>
