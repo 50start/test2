@@ -7,9 +7,13 @@
         </div>
         <h2 class="text-size"><%= @test.title %></h2>
          <div>
-          <div class="bodysize"><%= simple_format @test.body %></div>
-          <%= link_to "削除する",test_path(@test), method: :delete %>
-        </div>
-      </div>
+          <div class="bodysize"><%= simple_format @test.body %>
+            <% if user_signed_in? && current_user.id %>
+         　  <%= link_to "削除する",test_path(@test), method: :delete, class: "btn btn-danger" %>
+          　<%= link_to "編集する",edit_test_path(@test), class: "btn btn-success" %>
+          　<% end %>
+          </div>
+       </div>
     </div>
+  </div>
  </div>

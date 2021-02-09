@@ -37,12 +37,10 @@ class TestsController < ApplicationController
   
   def destroy
     test = Test.find(params[:id])
-    test.destroy
+    test.destroy 
     redirect_to root_path
-  end
+  end 
 
-
-  
   private
   def find_test
     @test = Test.find(params[:id])
