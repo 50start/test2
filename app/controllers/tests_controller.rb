@@ -1,6 +1,6 @@
 class TestsController < ApplicationController
   before_action :authenticate_user!, except: [:show, :index]
-  before_action :find_test, only: [:show, :edit, :update, :destroy]
+  before_action :find_test, only: [:show, :edit, :update]
   
   def index
   @tests = Test.all
@@ -36,11 +36,9 @@ class TestsController < ApplicationController
   end
   
   def destroy
-    if @test.destory
-      redirect_to root_path, notice: '削除に成功しました'
-    else
-      redirect_to root_path, alert: '削除できませんでした'
-    end
+    test = Test.find(params[:id])
+    test.destroy
+    redirect_to root_path
   end
 
 

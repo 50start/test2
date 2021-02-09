@@ -8,6 +8,7 @@
         <h2 class="text-size"><%= @test.title %></h2>
          <div>
           <div class="bodysize"><%= simple_format @test.body %></div>
+          <%= link_to "削除する",test_path(@test), method: :delete %>
         </div>
       </div>
     </div>
