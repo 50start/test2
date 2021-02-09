@@ -7,7 +7,7 @@
         <% @tests.each do |test| %>
          <div class="col-md-3">
           <%= link_to test do %>
-          <%= attachment_image_tag test, :image, :fill, 250, 250, fallback: "no_image.jpg" %>
+          <%= attachment_image_tag test, :image, :fill, 260, 260, fallback: "no_image.jpg" %>
           <P class="top-title"><%= test.title %></P>
         </div>
       <% end %>
