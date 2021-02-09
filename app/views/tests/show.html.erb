@@ -1,11 +1,13 @@
 <div class="container">
   <div class="row">
-     <h1 class="text-center">最強の係長のブログ</h1>
+     <h1 class="text-center">   </h1>
        <div class="col-md-4">
-        <%= attachment_image_tag @test, :image, :fill, 500, 300, fallback: "no_image.jpg" %>
-        <h1 class="text-size"><%= @test.title %></h1>
+        <div class="show-img">
+        <%= attachment_image_tag @test, :image, :fill, 700, 300, fallback: "no_image.jpg" %>
+        </div>
+        <h2 class="text-size"><%= @test.title %></h2>
          <div>
-          <%= simple_format @test.body %>
+          <div class="bodysize"><%= simple_format @test.body %></div>
         </div>
       </div>
     </div>

@@ -19,7 +19,7 @@
           <div class="collapse navbar-collapse" id="navigation">
           <p class="navbar-text navbar-right">
             <% if user_signed_in? %>
-            <%= link_to'管理者用',new_test_path %>
+            <%= link_to'新規投稿画面へ',new_test_path, class: "btn btn-secondary" %>
             <% end %>
           </p>
         </div>
