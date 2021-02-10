@@ -1,7 +1,11 @@
 <div class="container">
-  <div class="text-left">    
+  <div class="text-left"> 
     <% if user_signed_in? %>
-      <%= link_to'新規投稿画面へ',new_test_path %>
+     <button type="button" class="btn btn-warning btn-sm"><%= link_to'新規投稿',new_test_path %></button>
+     <button type="button" class="btn btn-secondary btn-sm"><%= link_to'ログアウト',destroy_user_session_path, method: :delete %></button>
+      <% else %>
+    <button type="button" class="btn btn-secondary btn-sm"><%= link_to'新規登録',new_user_registration_path %></button>
+    <button type="button" class="btn btn-secondary btn-sm"><%= link_to'ログイン',user_session_path %></button>
       <% end %>
        </div>
         <% @tests.each do |test| %>
