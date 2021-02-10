@@ -5,10 +5,13 @@
           <%= link_to test do %>
           <%= attachment_image_tag test, :image, :fill, 260, 260, fallback: "no_image.jpg" %>
           <P class="top-title"><%= test.title %></P>
+          <P clsss="nicknames"><%= @nicknames %></P>
         </div>
        <% end %>
     　<% end %>
-    　 </div>
+    　
+    　</div>
+    
     </div>
     
     <% if user_signed_in? %>

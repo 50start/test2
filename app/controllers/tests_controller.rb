@@ -5,10 +5,11 @@ class TestsController < ApplicationController
   
   def index
   @tests = Test.all
+  @nicknames = current_user.nickname
   end
   
   def show
-    
+  @nickname = current_user.nickname
   end
 
   def new

@@ -5,4 +5,5 @@ with_options presence: true do
     validates :body
     validates :image
   end
+ belongs_to :use
 end
