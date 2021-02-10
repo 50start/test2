@@ -1,7 +1,7 @@
 class TestsController < ApplicationController
   before_action :authenticate_user!, except: [:show, :index]
   before_action :find_test, only: [:show, :edit, :update]
-  before_action :move_index, except: :index
+  before_action :move_index, except: [:index, :show]
   
   def index
   @tests = Test.all
