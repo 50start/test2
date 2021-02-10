@@ -1,7 +1,7 @@
 class TestsController < ApplicationController
   before_action :authenticate_user!, except: [:show, :index]
   before_action :find_test, only: [:show, :edit, :update]
-  before_action :move_index, except: [:index, :show]
+  
   
   def index
   @tests = Test.all
@@ -53,10 +53,6 @@ class TestsController < ApplicationController
 
   def update_params
      params.require(:test).permit(:title, :body, :image)
-  end
-
-  def move_index
-     redirect_to action: :index unless user_signed_in?
   end
 
 end
