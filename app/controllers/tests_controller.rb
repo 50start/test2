@@ -49,11 +49,11 @@ class TestsController < ApplicationController
   end
   
   def test_params
-     params.require(:test).permit(:title, :body, :image)
+     params.require(:test).permit(:title, :body, :image, :user_id)
   end  
 
   def update_params
-     params.require(:test).permit(:title, :body, :image)
+     params.require(:test).permit(:title, :body, :image, :user_id)
   end
 
 end
