@@ -3,7 +3,9 @@
     <% @tests.each do |test| %>
        <div class="col-md-3">
           <%= link_to test do %>
-          <%= attachment_image_tag test, :image, :fill, 260, 260, fallback: "no_image.jpg" %>
+          <% if test.image.attached? %>
+          <%= image_tag test.image, class: 'img-responsive'%>
+          <% end %>
           <P class="top-title"><%= test.title %></P>
           </div>
        <% end %>

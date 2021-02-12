@@ -2,7 +2,9 @@
   <div class="row">
        <div class="col-md-12">
         <div class="show-img">
-        <%= attachment_image_tag @test, :image, :fill, 330, 300, fallback: "no_image.jpg" %>
+      <% if @test.image.attached? %>
+      <%= image_tag @test.image, class: 'img-responsive' %>
+      <% end %>
         </div>
         <h2 class="text-size"><%= @test.title %></h2>
          <div class="bodysize"><%= simple_format @test.body %>

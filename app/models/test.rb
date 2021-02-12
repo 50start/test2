@@ -1,5 +1,5 @@
 class Test < ApplicationRecord
-attachment :image
+has_one_attached :image
 with_options presence: true do
     validates :title
     validates :body

@@ -74,3 +74,4 @@ end
 gem 'cancancan'
 gem 'rails_admin'
 gem 'bootstrap-sass'
+gem "aws-sdk-s3", require: false
