@@ -16,7 +16,6 @@
             <% if current_user && current_user.admin_flg %>
             <%= link_to'新規投稿画面へ',new_test_path, class: "btn btn-info" %>
             <%= link_to'ログアウト',destroy_user_session_path, method: :delete, class: "btn btn-primary" %>
-            
             <%= link_to'新規登録',new_user_registration_path, class: "btn btn-primary" %>
             <%= link_to'ログイン',user_session_path, class: "btn btn-primary" %>
             <% end %>
