@@ -17,6 +17,17 @@ body {
 
 .bodysize{
     font-size: 16px;
-    
+}
+
+.img-responsive {
+  display: block;
+  height: autopx;
+  max-width: 100%;
+}
+
+.img-fluid {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 

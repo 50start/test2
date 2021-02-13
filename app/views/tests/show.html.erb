@@ -1,19 +1,21 @@
 <div class="container">
   <div class="row">
-       <div class="col-md-12">
+       <div class="col-md-5">
         <div class="show-img">
       <% if @test.image.attached? %>
-      <%= image_tag @test.image, class: 'img-responsive' %>
+      <%= image_tag @test.image, class: 'img-fluid center-block rounded float-start' %>
       <% end %>
         </div>
         <h2 class="text-size"><%= @test.title %></h2>
          <div class="bodysize"><%= simple_format @test.body %>
-           <% if user_signed_in? %>
+           
+           <% if current_user && current_user.admin_flg %>
          　<%= link_to "削除する",test_path(@test), method: :delete, class: "btn btn-danger" %>
            <%= link_to "編集する",edit_test_path(@test), class: "btn btn-success" %>
            <% end %>
+           
           　</div>
          </div>
        </div>
      </div>
-   </div>
+   
