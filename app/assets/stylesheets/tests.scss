@@ -31,3 +31,17 @@ body {
     height: auto;
 }
 
+.col-md-3{
+    display:flexbox;
+    background-color: white;
+    margin-left: 10px;
+    padding-top: 10px;
+    border: thick double #32a1ce;
+    display: flexbox;
+    flex-wrap: wrap;
+    height: 366px;
+}
+
+.text-right {
+    
+}
