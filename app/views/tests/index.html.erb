@@ -11,10 +11,7 @@
                <div class="text-right">
                 <%= test.created_at.strftime("%Y年%m月%d日") %>
                 </div>
-               <% if current_user && current_user.admin_flg %>
-              <%= link_to'新規投稿',new_test_path %>
-             <% end %>
-            </div> 
+               </div> 
            </div>
           <% end %>
     　   <% end %>
