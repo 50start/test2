@@ -47,11 +47,11 @@ class TestsController < ApplicationController
   end
   
   def test_params
-     params.require(:test).permit(:title, :body, :image).merge(user_id: current_user.id)
+     params.require(:test).permit(:title, :body, :image)
   end  
 
   def update_params
-     params.require(:test).permit(:title, :body, :image).merge(user_id: current_user.id)
+     params.require(:test).permit(:title, :body, :image)
   end
 
 end
