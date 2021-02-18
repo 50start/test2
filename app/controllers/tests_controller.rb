@@ -16,7 +16,6 @@ class TestsController < ApplicationController
 
   def create
     @test = Test.new(test_params)
-    @test.user_id == current_user.id
      if @test.save
       redirect_to root_path(@test)
     else
