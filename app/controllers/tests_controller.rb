@@ -2,14 +2,12 @@ class TestsController < ApplicationController
   before_action :authenticate_user!, except: [:show, :index]
   before_action :find_test, only: [:show, :edit, :update]
   
-  
   def index
-  @tests = Test.all
-  
+    @tests = Test.all.order(created_at: :desc)
   end
   
   def show
-  
+     
   end
 
   def new
@@ -18,6 +16,7 @@ class TestsController < ApplicationController
 
   def create
     @test = Test.new(test_params)
+    @test.user_id == current_user.id
      if @test.save
       redirect_to root_path(@test)
     else
@@ -49,11 +48,11 @@ class TestsController < ApplicationController
   end
   
   def test_params
-     params.require(:test).permit(:title, :body, :image)
+     params.require(:test).permit(:title, :body, :image).merge(user_id: current_user.id)
   end  
 
   def update_params
-     params.require(:test).permit(:title, :body, :image)
+     params.require(:test).permit(:title, :body, :image).merge(user_id: current_user.id)
   end
 
 end
