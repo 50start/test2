@@ -9,11 +9,11 @@
          <h2 class="text-size"><%= @test.title %></h2>
          <div class="bodysize"><%= simple_format @test.body %>
          <div class="text-right"> 
-     　　 <%= @test.created_at.strftime("%Y年%m月%d日") %>
+         <p><%= @test.created_at.strftime("%Y年%m月%d日") %></p>
          </div>
         </div>
        </div>
-      <% if current_user && current_user.admin_flg %>
+       <% if current_user && current_user.admin_flg %>
       <%= link_to "削除", test_path, method: :delete %>
       <%= link_to "編集", edit_test_path(@test) %>
       <% end %>
