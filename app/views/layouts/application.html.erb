@@ -12,17 +12,17 @@
         <div class="navbar-header">
           <a class="navbar-brand" href="/">最強の係長のブログへようこそ</a>
           </div>
-          <div class="collapse navbar-collapse" id="navigation">
-          <p class="navbar-text navbar-right">
+            <div class="collapse navbar-collapse" id="navigation">
+             <p class="navbar-text navbar-right">
             <% if current_user && current_user.admin_flg %>
-            <%= link_to'新規投稿画面へ',new_test_path, class: "btn btn-info" %>
-            <%= link_to'ログアウト',destroy_user_session_path, method: :delete, class: "btn btn-primary" %>
-            <%= link_to'新規登録',new_user_registration_path, class: "btn btn-primary" %>
-            <%= link_to'ログイン',user_session_path, class: "btn btn-primary" %>
-            <% end %>
-          </p>
+            <%= link_to'新規投稿画面へ',new_test_path, class: "btn btn-warning" %>
+            <%= link_to'ログアウト',destroy_user_session_path, method: :delete, class: "btn btn-warning" %>
+            <%= link_to'新規登録',new_user_registration_path, class: "btn btn-warning" %>
+            <%= link_to'ログイン',user_session_path, class: "btn btn-warning" %>
+         <% end %> 
+          </P>
         </div>
-      </div>
+       </div>
     </nav> 
   </head>
 <body>

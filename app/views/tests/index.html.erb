@@ -1,7 +1,7 @@
 <div class="container">
  <div class="row">
-  <div class="text-center"> 
-  <p><%= link_to "ブログに対しての評価をお願いします！", "https://secret-sierra-85449.herokuapp.com", class:"btn btn-success btn-sm"%></p>
+     <div class="text-center"> 
+   <p><%= link_to "ブログに対しての評価をお願いします！", "https://secret-sierra-85449.herokuapp.com", class:"btn btn-success btn-sm"%></p>
     <% @tests.each do |test| %>
       <div class="col-md-3">
         <%= link_to test do %>
@@ -18,6 +18,34 @@
     　   <% end %>
         </div>
        </div>
+       
+       <button id="btn" class="btn btn-warning btn-sm">おみくじチャレンジ</button>
+       <div id="disp"></div>
+      <script>
+        const omikuji_items = ["大吉だ〜〜!!","中吉です！","小吉！","末吉なり","凶でした。。。"];
+        const btn = document.getElementById("btn");
+        const disp = document.getElementById("disp");
+        const num = 0;
+
+        btn.addEventListener("click", function(){
+         const num = Math.floor(Math.random() * omikuji_items.length);
+         const result = omikuji_items[num];
+         disp.innerHTML = result;
+         
+         if(result == "大吉"){
+            alert("おめでとうございます！ いい日になるといいですね！");
+         }else if(result == "凶"){
+             alert("残念。。。　でも気にしないで前向きに頑張りましょう！");
+         }else if(result == "中吉"){
+             alert("行動次第では良い１日になるかも（＾＾）");
+         }else if(result == "小吉"){
+             alert("今日１日をコツコツ頑張りましょう！");
+        　　}else{
+             alert("小さい喜びが見つかるかもしれませんね");
+          }
+       })  
+        </script>
+       
        <% if current_user && current_user.admin_flg %>
        <%= link_to'新規投稿画面へ',new_test_path %>
        <%= link_to'ログアウト',destroy_user_session_path, method: :delete %>
@@ -26,8 +54,6 @@
        <% end %>
        </div>
        
-   
-  
     
    
     
