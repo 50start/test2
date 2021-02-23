@@ -1,7 +1,7 @@
 <div class="container">
  <div class="row">
-  <p><%= link_to "ブログに対しての評価をお願いします！", "https://secret-sierra-85449.herokuapp.com" %></p>
   <div class="text-center"> 
+  <p><%= link_to "ブログに対しての評価をお願いします！", "https://secret-sierra-85449.herokuapp.com", class:"btn btn-success btn-sm"%></p>
     <% @tests.each do |test| %>
       <div class="col-md-3">
         <%= link_to test do %>
