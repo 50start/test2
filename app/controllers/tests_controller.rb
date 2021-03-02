@@ -3,8 +3,7 @@ class TestsController < ApplicationController
   before_action :find_test, only: [:show, :edit, :update]
   
   def index
-    @tests = Test.all.order(created_at: :desc)
-    @tests = Test.page(params[:page]).per(6)
+    @tests = Test.all.order(created_at: :desc).page(params[:page]).per(6)
   end
   
   def show
