@@ -6,26 +6,17 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=10.0, user-scalable=yes">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <script src="https://kit.fontawesome.com/484e6509e8.js" crossorigin="anonymous"></script>
-    <nav class="navbar navbar-default">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    </head>
+    
+  <body>
+   <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="/">最強の係長のブログへようこそ</a>
-          </div>
-            <div class="collapse navbar-collapse" id="navigation">
-             <p class="navbar-text navbar-right">
-            <% if current_user && current_user.admin_flg %>
-            <%= link_to'新規投稿画面へ',new_test_path, class: "btn btn-warning" %>
-            <%= link_to'ログアウト',destroy_user_session_path, method: :delete, class: "btn btn-warning" %>
-            <%= link_to'新規登録',new_user_registration_path, class: "btn btn-warning" %>
-            <%= link_to'ログイン',user_session_path, class: "btn btn-warning" %>
-         <% end %> 
-          </P>
+          <a class="navbar-brand" href="/">最強の係長のホームページ</a>
         </div>
-       </div>
-    </nav> 
-  </head>
-<body>
+      </div>
+    </nav>
    <% if flash[:notice] %>
       <div class="notification is-info">
         <p class="notice"><%= notice %></p>
@@ -37,5 +28,5 @@
       </div>
     <% end %>
   <%= yield %>
-  </body>
+</body>
 </html>
