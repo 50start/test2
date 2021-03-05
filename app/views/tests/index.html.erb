@@ -1,12 +1,8 @@
 <div class="container">
-   <div class="row">
-     <div class="text-center">
-       <%= link_to "最強の係長のプロフィール", user_path(:id), class:"btn btn-info btn-sm" %>
-       </div>
-       <div class="text-right">
+   <div class="text-left">
        <%= paginate @tests %>
-    　 </div>
-    <% @tests.each do |test| %>
+       </div>
+      <% @tests.each do |test| %>
       <div class="col-md-3">
         <%= link_to test do %>
           <% if test.image.attached? %>
@@ -14,42 +10,13 @@
              <% end %>
              <div class="top-title"><%= test.title %>
                <div class="text-right">
-                 <div class"strftime"><%= test.created_at.strftime("%Y年%m月%d日")%></div>
+                 <div class"strftime"><%= test.created_at.strftime("%Y年%m月%d日")%>
+                 </div>
                </div>
               </div>
             </div>
           <% end %>
-    　   <% end %>
-        </div>
-        <%= link_to "ブログに対しての評価をお願いします！", "https://secret-sierra-85449.herokuapp.com", class:"btn btn-success btn-sm"%>
-       
-       
-       <button id="btn" class="btn btn-warning btn-sm">おみくじチャレンジ</button>
-       <div id="disp"></div>
-      <script>
-        const omikuji_items = ["大吉だ〜〜!!","中吉です！","小吉！","末吉なり","凶でした。。。"];
-        const btn = document.getElementById("btn");
-        const disp = document.getElementById("disp");
-        const num = 0;
-
-        btn.addEventListener("click", function(){
-         const num = Math.floor(Math.random() * omikuji_items.length);
-         const result = omikuji_items[num];
-         disp.innerHTML = result;
-         
-         if(result == "大吉だ〜〜!!"){
-            alert("おめでとうございます！ いい日になるといいですね！");
-         }else if(result == "凶でした。。。"){
-             alert("残念。。。　でも気にしないで前向きに頑張りましょう！");
-         }else if(result == "中吉です！"){
-             alert("行動次第では良い１日になるかも（＾＾）");
-         }else if(result == "小吉！"){
-             alert("今日１日をコツコツ頑張りましょう！");
-         }else if(result == "末吉なり"){
-             alert("小さい喜びが見つかるかもしれませんね");
-          }
-       })  
-        </script>
+    　    <% end %>
         </div>
        <% if current_user && current_user.admin_flg %>
        <%= link_to'新規投稿画面へ',new_test_path %>
@@ -57,7 +24,6 @@
        <%= link_to'新規登録',new_user_registration_path %>
        <%= link_to'ログイン',user_session_path %>
        <% end %>
-      
        </div>
        
     
