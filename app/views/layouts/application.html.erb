@@ -13,8 +13,20 @@
       <div class="container-fluid">
         <div class="navbar-header">
           <a class="navbar-brand" href="/">最強の係長のホームページ</a>
-        <%= link_to "最強の係長のプロフィール", user_path(:id), class:"btn btn-info btn-sm" %>
-         <%= link_to "ブログに対しての評価をお願いします！", "https://secret-sierra-85449.herokuapp.com", class:"btn btn-success btn-sm"%>
+         <div class="hamburger-menu">
+          <input type="checkbox" id="menu-btn-check">
+          <label for="menu-btn-check" class="menu-btn"><span></span></label>
+          <div class="menu-content">
+         <ul>
+           <li>
+         <%= link_to "最強の係長のプロフィール", user_path(:id)%>
+           </li>
+           <li>
+         <%= link_to "ブログに対しての評価をお願いします！", "https://secret-sierra-85449.herokuapp.com"%>
+          </li>
+        </ul>
+        </div>
+        </div>
         </div>
       </div>
     </nav>
