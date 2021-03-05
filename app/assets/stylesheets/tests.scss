@@ -9,8 +9,8 @@ body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 14px;
     line-height: 2.428571;
-    color: #333333;
-    background-color: lightyellow;
+    color: #666666;
+    background-color: #F3FFD8
 }
 
 .top-title{
@@ -19,7 +19,7 @@ body {
 }
 
 .bodysize{
-    font-size: 16px;
+    font-size: 22px;
 }
 
 .img-responsive {
@@ -61,4 +61,8 @@ body {
     border-color: #eea236;
     margin-top: 10px;
     margin-left: 12px;
+}
+
+.text-size{
+    text-align: center;
 }
