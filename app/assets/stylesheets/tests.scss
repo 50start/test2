@@ -71,7 +71,7 @@ body {
     float: left;
     height: 41px;
     padding: 15px 15px;
-    font-size: 20px;
+    font-size: 15px;
     line-height: 40px;
 }
 
@@ -162,7 +162,7 @@ body {
 
 .menu-content {
   width: 100%;
-  height: 18%;
+  height: 25%;
   position: fixed;
   top: 0;
   left: 100%;
@@ -172,4 +172,22 @@ body {
 }
 #menu-btn-check:checked ~ .menu-content {
   left: 0;
+}
+
+.form-control {
+    width: 96%;
+}
+
+.card-body{
+  padding: 0.5em 1em;
+    margin: 2em 0;
+    font-weight: bold;
+    color: #6091d3;/*文字色*/
+    background: #FFF;
+    border: solid 2px #6091d3;/*線*/
+    border-radius: 10px;/*角の丸み*/
+}
+
+.onegai{
+  font-size: 3px;
 }

@@ -73,7 +73,7 @@ group :production do
 end
 gem 'cancancan'
 gem 'rails_admin'
-gem 'bootstrap-sass'
 gem "aws-sdk-s3", require: false
 gem 'jquery-rails'
 gem 'kaminari'
+gem 'bootstrap-sass'
